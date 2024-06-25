@@ -1,4 +1,4 @@
-* {
+*, *:before, *:after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 .firstname-content label, .lastname-content label{
     display: block;
@@ -52,18 +52,53 @@ body{
 }
 .query-type{
     border: none;
+    display: flex;
 }
 .query-type label{
     border: 1px solid hsl(148, 100%, 77%);
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     padding: 10px;
     margin-right: 10px;
     width: 258px;
     border-radius: 5px;
     margin-top: 10px;
 }
-.query-type input{
-    padding: 20px;
+.query-type label:hover{
+    border: 1px solid hsl(169, 82%, 27%);
+}
+.query-type input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0;
+    font: inherit;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid hsl(169, 82%, 27%);
+    border-radius: 50%;
+    transform: translateY(0.09em);
+}
+input[type="radio"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+}
+.query-type input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+.query-type label:active{
+    background-color: hsl(148, 100%, 77%);
+}
+input[type="radio"]:focus{
+    outline: max(2px, 0.10em) solid hsl(169, 82%, 27%);
+    outline-offset: max(2px, 0.10em);
+    background-color: hsl(169, 82%, 27%);
 }
 .textarea-content label{
     display: block;
