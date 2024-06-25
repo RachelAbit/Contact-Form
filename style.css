@@ -2,4 +2,97 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Karla;
+}
+body{
+    background-color: hsl(148, 38%, 91%);
+}
+.container{
+    width: 600px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+}
+.personal-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 15px;
+    margin-top: 25px;
+}
+.firstname-content label, .lastname-content label{
+    display: block;
+    margin-bottom: 10px;
+}
+.firstname-content input, .lastname-content input{
+    width: 260px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid hsl(148, 100%, 77%);
+    text-indent: 4px;
+}
+.email-content label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.email-content input{
+    width: 530px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid hsl(148, 100%, 77%);
+    text-indent: 4px;
+    margin-bottom: 10px;
+}
+.query-type{
+    border: none;
+}
+.query-type label{
+    border: 1px solid hsl(148, 100%, 77%);
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    width: 258px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.query-type input{
+    padding: 20px;
+}
+.textarea-content label{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.textarea-content textarea{
+    width: 530px;
+    height: 70px;
+    outline: none;
+    border: 1px solid hsl(148, 100%, 77%);
+    border-radius: 5px;
+    text-indent: 4px;
+    margin-bottom: 15px;
+}
+.checkbox{
+    /* border: 1px solid black; */
+    margin-bottom: 20px;
+}
+button{
+    width: 530px;
+    padding: 10px;
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.firstname-content input:focus, .lastname-content input:focus,
+.email-content input:focus, .textarea-content textarea:focus{
+    border: 2px solid hsl(169, 82%, 27%);
 }

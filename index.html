@@ -10,6 +10,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
-            
+   <main>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="form">
+                <form action="">
+
+                    <div class="personal-details">
+                        <div class="firstname-content">
+                          <label for="fname">First name *</label>
+                          <input type="text" name="fname" id="fname" required>
+                        </div>
+                        <div class="lastname-content">
+                          <label for="lname">Last name *</label>
+                          <input type="text" name="lname" id="lname" required>
+                        </div>
+                    </div>
+
+                    <div class="email">
+                        <div class="email-content">
+                          <label for="email">Email Address *</label>
+                          <input type="email" name="email" id="email" required>
+                        </div>
+                    </div>
+
+                    <fieldset class="query-type">
+                        <legend>Query Type *</legend>
+                        <label for="generalEnquiry">
+                          <input type="radio" id="generalEnquiry" name="query" value="general"> General Enquiry
+                        </label>
+                        <label for="supportRequest">
+                          <input type="radio" id="supportRequest" name="query" value="support"> Support Request
+                        </label>
+                    </fieldset>
+
+                    <div class="textarea">
+                        <div class="textarea-content">
+                          <label for="message">Message *</label>
+                          <textarea name="message" id="message" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="checkbox">
+                        <div class="checkbox-content">
+                          <input type="checkbox" name="confirm" id="confirm" required>
+                          <span style="font-size: 14px;">I consent being contacted by the team *</span>
+                        </div>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>  
+   </main>    
 </body>
 </html>
